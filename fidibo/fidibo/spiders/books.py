@@ -28,7 +28,7 @@ class BooksDetails(scrapy.Spider):
                 "Publisher": publisher,
                 "Rating": rating,
                 "Category": category,
-                "image": image
+                "Image": image
             }
         else:
             
