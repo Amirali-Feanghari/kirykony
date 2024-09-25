@@ -17,6 +17,7 @@ class BooksDetails(scrapy.Spider):
         publisher = response.css("div.book-buy-box-detail-content-publisher::text").get()
         rating = response.css("div.book-buy-box-header-rate-title::text").get()
         category = response.css("div.book-introduction-categories-items a::text").get()
+        image = response.css("div.book-main-box img::attr(src)").get()
 
 
         if title:
@@ -26,7 +27,8 @@ class BooksDetails(scrapy.Spider):
                 "Auther": auther,
                 "Publisher": publisher,
                 "Rating": rating,
-                "Category": category
+                "Category": category,
+                "image": image
             }
         else:
             
