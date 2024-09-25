@@ -1,7 +1,7 @@
 import scrapy
 
 class BooksDetails(scrapy.Spider):
-    count = 3836  
+    count = 1  
     name = "bookdetail"
     max_count = 4000  
 
